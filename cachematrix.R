@@ -1,10 +1,13 @@
 makeCacheMatrix <- function(x = matrix()) {
+  ## Initialize the inverse property
   invrs <- NULL
   set <- function(y) {
     x <- y
     invrs <- NULL
   }
-  get <- function() x
+  ## Method to get the matrix
+  get <- function() 
+  x
   setinverse <- function(inverse) invrs <- inverse
   getinverse <- function() invrs
   list(set = set, get = get,
